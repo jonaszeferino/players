@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-const url = "http://localhost:3001/api/players/reviews";
+const url = "http://localhost:3000/api/players/reviews";
 
 export default function Tennis() {
-  let [playerName, setPlayerName] = useState([]);
+  let [playerName, setPlayerName] = useState(null);
 
   useEffect(() => {
     fetch(url)
@@ -13,5 +13,10 @@ export default function Tennis() {
 
   console.log(playerName);
 
-  return <div>Brow</div>;
+  return (
+    <div>
+      {playerName &&
+        playerName.map((player) => <div key={player._id}>{player.name}</div>)}
+    </div>
+  );
 }
