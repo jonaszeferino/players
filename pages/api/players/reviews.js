@@ -11,7 +11,6 @@ export default async function handler(req, res) {
       res.json({
         status: 200,
         data: getMongo,
-        get: "Get Feito Com Sucesso!",
       });
       break;
 
