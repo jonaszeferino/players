@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "../../styles/Home.module.css";
 
-const url = "http://localhost:3000/api/players/tennisReviews";
+const url = "http://localhost:3000/api/players/soccerReviews";
 
 export default function Tennis() {
   let [playerName, setPlayerName] = useState(null);
@@ -16,7 +16,7 @@ export default function Tennis() {
 
   return (
     <div>
-      <h2 className={styles.title}>My Teenis Players Reviews</h2>
+      <h3 className={styles.title}>My Soccer Players Reviews</h3>
       <br />
       <div className={styles.grid}>
         {playerName &&
@@ -26,17 +26,23 @@ export default function Tennis() {
               <br />
               <span>Age: {player.age}</span>
               <br />
-              <span>Hand: {player.hand}</span>
+              <span>Team: {player.franchise}</span>
               <br />
-              <span>Plays: {player.plays}</span>
+              <span>Position: {player.position}</span>
               <br />
-              <span>Service: {player.sacks}</span>
+              <span>Foot: {player.foot}</span>
+              <br />
+              <span>Speed: {player.speeding}</span>
+              <br />
+              <span>Defending: {player.defending}</span>
+              <br />
+              <span>Physical: {player.physical}</span>
               <br />
               <span>Hability: {player.hability}</span>
               <br />
-              <span>Phisycal: {player.physical}</span>
+              <span>Shooting: {player.shooting}</span>
               <br />
-              <span>Rating: {player.rate}</span>
+              <span>Rate: {player.rate}</span>
               <br />
             </div>
           ))}

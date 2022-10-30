@@ -1,5 +1,5 @@
-import Tennis from "./reviews/tennis"
+import Tennis from "./reviews/tennis";
 
 export default function Home() {
-  return (<Tennis></Tennis>)
+  return <div>Home</div>;
 }
